@@ -107,3 +107,17 @@ header {
     background: #FFF; }
   .card img {
     height: 250px; }
+
+@media (min-width: 500px) {
+  #cards-wrapper {
+    display: flex;
+    flex-wrap: wrap; }
+  .card {
+    width: calc(100% / 2 - 24px);
+    max-width: 320px;
+    margin: 10px; }
+    .card:first-child {
+      margin: 10px; }
+    .card:last-child {
+      flex-grow: 2;
+      max-width: none; } }
