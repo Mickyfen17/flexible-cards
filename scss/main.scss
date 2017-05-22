@@ -58,8 +58,7 @@ header {
 
 #cards-wrapper {
   width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 .card {
@@ -68,9 +67,6 @@ header {
   height: 100%;
   border: 2px solid #D1D2D3;
   margin-bottom: 20px;
-  &:first-child {
-    margin-top: 30px;
-  }
   h2 {
     height: 50px;
     padding: 0 10px;
@@ -86,6 +82,19 @@ header {
   }
 }
 
+#code-btn {
+  display: block;
+  width: 90%;
+  max-width: 300px;
+  margin: 0 auto 20px auto;
+  padding: 15px 0;
+  background: $darkPurple;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 @media (min-width: 500px) {
   #cards-wrapper {
     display: flex;
@@ -93,17 +102,35 @@ header {
   }
   .card {
     width: calc(100% / 2 - 24px);
-    max-width: 320px;
     margin: 10px;
     &:first-child {
       margin: 10px;
     }&:last-child {
       flex-grow: 2;
-      max-width: none;
     }
   }
 }
 
 @media (min-width: 768px) {
-
+  .card {
+    &:first-child {
+      flex-grow: 2;
+    }
+    &:nth-child(2),
+    &:nth-last-child(2) {
+      width: calc(100% / 3 - 24px);
+      max-width: 355px;
+    }
+    h2 {
+      height: 60px;
+      line-height: 60px;
+      font-size: 1.2em;
+    }
+    img {
+      height: 240px;
+    }
+  }
+  .middle {
+    width: calc(100% / 3 - 24px);
+  }
 }
